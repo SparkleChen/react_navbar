@@ -1,0 +1,116 @@
+
+
+body{
+    /*font-family: MicrosoftYaHei-Bold;*/
+    min-width:1450px
+}
+
+#i_nav_back{
+    color: white;
+    height: 50px;
+    z-index: 1500;
+}
+#i_nav{
+    height: 50px;
+    line-height: 50px;
+    background-color: #0083CB;
+}
+#i_nav_log{
+    margin-left: 20px;
+    padding-top: 0px;
+}
+#i_nav_right{
+    width: 93%;
+    float: right;
+}
+#i_nav_right a{
+    float: right;
+    margin-top: -4px;
+    margin-right: 15px;
+}
+#i_nav_right a:hover{
+    cursor: default;
+}
+
+#i_card_back{
+    z-index: 1500;
+    background-color: #364153;
+    border: 0px;
+    width: 250px;
+    height: 1000px;
+    float: left;
+    position: fixed;
+    border-radius: inherit;
+}
+#i_card_back div{
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.card-block{
+    overflow-y:auto;
+}
+.i_card_back_b{
+    background-color: #364153;
+}
+.card-header img{
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.card-header a{
+    color: white;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.i-card-d{
+    height: 44px;
+    color: white;
+    line-height:44px;
+    border-style: solid none none none;
+    border-width:2px;
+    border-color: #364153;
+}
+a:link,a:visited{
+    text-decoration:none;
+}
+.i-card-d:hover{
+    cursor: pointer;
+    background-color: #3ea2d6;
+}
+#i_card_d1:hover img{
+    content: url(../image/userChart_white.png);
+}
+#i_card_d2:hover img{
+    content: url(../image/managerChart_white.png);
+}
+#i_card_d3:hover img{
+    content: url(../image/manager_white.png);
+}
+#i_card_d4:hover img{
+    content: url(../image/userInfo_white.png);
+}
+#i_card_d5:hover img{
+    content: url(../image/logout_white.png);
+}
+.i-card-d img{
+    margin-left: 30px;
+}
+.i-card-d span{
+    margin-left: 10px;
+}
+#i_content{
+    width: auto;
+    margin-left: 250px;
+}
+
+
+@media screen and (max-width:576px){
+    #i_card_back{
+        margin-left:-250px ;
+    }
+    #i_content{
+        margin-left: 0px;
+    }
+
+}

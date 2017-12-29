@@ -13,11 +13,12 @@ var User =new Schema({
 		 email: String,
 	     age: String
 	});
-	
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 		res.render('navbar');
 });
+
  router.get('/data', function(req, res, next) {
     db.model('users',User).findOne({name:"leo"}, function (err, user) {
         res.json(user);

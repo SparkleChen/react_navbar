@@ -11,6 +11,7 @@ var cors = require('cors');
 
 //这是navbar路由文件
 var navbar = require('./routes/navbar');
+var cloudLicense = require('./routes/cloudLicense');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -39,6 +40,7 @@ app.use('/users', users);
 
 //这是navbar路由
 app.use('/navbar',navbar);
+app.use('/cloudLicense',cloudLicense);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

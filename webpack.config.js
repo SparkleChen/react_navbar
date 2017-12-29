@@ -1,8 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-/* var publicPath = 'http://localhost:3000/';
-var hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true'; */
 var ROOT_PATH = path.resolve(__dirname);
 var BUILD_PATH = path.resolve(ROOT_PATH, 'public/build');
 
@@ -22,7 +20,7 @@ module.exports = {
 		progress:true,
         contentBase: path.join(__dirname, "public"),
         host:'localhost',
-        port:'8080'/*,
+        port:'8090'/*,
 	    proxy:{
 		   '/navbar/data':{
 			   target:'http://localhost:3000',
@@ -47,6 +45,10 @@ module.exports = {
             {
                 test: /\.(png|jpg)$/,
                 loader: 'url-loader?limit=8192'
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot|svg)$/,
+                loader: 'file-loader'
             }
         ]
     },
@@ -54,7 +56,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template:'public/templates/index.html'
 			}),
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+              $: "jquery",
+              jquery: "jquery",
+              "window.jQuery": "jquery",
+              jQuery:"jquery",
+             "Tether": "tether"
+          })
 	],
 
     resolve: {

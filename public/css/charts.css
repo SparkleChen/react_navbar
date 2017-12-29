@@ -1,0 +1,104 @@
+body{
+    background: #f9f9f9;
+}
+.laydate_box,
+.laydate_box * {
+    box-sizing: content-box;
+}
+.online-log-interval {
+    padding: 1rem;
+}
+#dynamicLine {
+    height:15rem;
+    border:thin solid #e5e5e5;
+}
+#time{
+    height:3rem;
+    padding: 0.1rem;
+    text-align: center;
+    top: 0.8rem;
+}
+#time>button{
+    height:1.8rem;
+    top:0.15rem;
+    padding: 0;
+    cursor: pointer;
+
+    float:left;
+    margin: 0px;
+}
+#confirm {
+    background: #0083CB;
+    color: #ffffff;
+    border: 0.3px;
+/*    padding: 0px;
+    height:1.7rem;
+    box-sizing: content-box;*/
+}
+#myTab>li{
+    text-align: center;
+}
+#iLicenseTab>li{
+    width: 100%;
+    text-align: center;
+}
+#iLicenseTab li:first-child{
+    min-width: 70px;
+}
+#searchDiv span {
+    font-size: 12px;
+    background-color: #ffffff;
+    color: #686868;
+}
+
+#searchDiv input {
+    font-size: 15px;
+}
+
+#searchDiv input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #888888;
+}
+
+#searchDiv input:-moz-placeholder {
+    font-size: 12px;
+    color: #888888;
+}
+
+#searchDiv input::-moz-placeholder {
+    font-size: 12px;
+    color: #888888;
+}
+
+#searchDiv input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #888888;
+}
+
+#searchDiv div {
+    padding: 0px;
+    height: 1.8rem;
+    box-sizing: content-box;
+}
+
+option {
+    color: #000000;
+}
+
+#notselect {
+    color: #888888;
+}
+#infoBox {
+    border: 0px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 1250;
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+
+
+

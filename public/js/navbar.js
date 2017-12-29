@@ -6,7 +6,11 @@ import thunk from 'redux-thunk'
 import promise from 'redux-promise'
 import  reducer from'./reducers/navbar_reducer'
 import Sm from './containers/navbar'
-require("../css/navbar.css");
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-grid/dist/grid.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
+import '../css/charts.css'
+import '../css/navbar.css'
 
 /*const middleware = [ thunk ];
 
@@ -17,7 +21,7 @@ const store = createStore(
 const  store = createStore(
     reducer,
     applyMiddleware(thunk)
-)
+);
 
 render(
     <Provider store={store}>

@@ -1,10 +1,13 @@
 export const REQUEST_SUCCESS = 'REQUEST_SUCCESS';
+export const WINDOWS_UPDATE = 'WINDOWS_UPDATE';
 
 export const requestSuccess = data => ({
     type: REQUEST_SUCCESS,
     nickname:data
 });
-
+export const windowsResizeStyle = () => ({
+    type:WINDOWS_UPDATE
+});
 
 export function fetchdata() {
     return dispatch =>{

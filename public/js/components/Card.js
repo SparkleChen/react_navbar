@@ -1,5 +1,6 @@
 import React from 'react'
 import html from './data/navbarList'
+import { Link } from 'react-router-dom';
 
 
 export default class Card extends React.Component {
@@ -31,6 +32,7 @@ class Card_brand extends React.Component {
     }
 
     componentDidMount() {
+       // <a key={item[i].href}  href={item[i].href} id={item[i].id}></a>
     }
 
     getBrandComponents() {
@@ -38,13 +40,13 @@ class Card_brand extends React.Component {
         let big = [];
         for (let i = 0, len = this.props.value.dropdown.length; i < len; i++) {
             big.push(
-                <a key={item[i].href} href={item[i].href} id={item[i].id}>
+                <Link to='/echarts' id={item[i].id} key={item[i].href}>
                     <div className="i-card-d">
                         <img
                             src={"../../image/" + (item[i].href ? item[i].href : "logout") + "_white.png"}/>
                         <span>{item[i].text}</span>
                     </div>
-                </a>
+                </Link>
             );
         }
         return big;

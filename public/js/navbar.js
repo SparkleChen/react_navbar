@@ -3,9 +3,11 @@ import {render} from 'react-dom'
 import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
+import {HashRouter,Route} from 'react-router-dom'
 import promise from 'redux-promise'
 import reducer from './reducers/navbar_reducer'
 import Sm from './containers/navbar'
+import Echar from './components/Echarts'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-grid/dist/grid.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
@@ -25,7 +27,12 @@ const store = createStore(
 
 render(
     <Provider store={store}>
-        <Sm/>
+        <HashRouter>
+            <div>
+                <Route exact path="/" component={Sm}/>
+                <Route path="/echarts" component={Echar}/>
+            </div>
+        </HashRouter>
     </Provider>,
     document.getElementById('navbar')
 );

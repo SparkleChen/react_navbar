@@ -9,12 +9,8 @@ var ejs = require('ejs');
 var cors = require('cors');
 
 
-//这是navbar路由文件
-var navbar = require('./routes/navbar');
-//var cloudLicense = require('./routes/cloudLicense');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+//var cloudLicense = require('./routes/cloudLicense');
 
 var app = express();
 
@@ -31,12 +27,11 @@ app.use(cors());
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', index);
-app.use('/users', users);
+//这是navbar路由文件
+var navbar = require('./routes/navbar');
 
 //这是navbar路由
 app.use('/navbar',navbar);
